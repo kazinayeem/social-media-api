@@ -5,9 +5,7 @@ const logger = require("morgan");
 const app = express();
 app.use(logger("dev"));
 app.use(express.json());
-require("dotenv").config({
-  path: "./env/config.env",
-});
+require("dotenv").config();
 
 app.get("/", (req, res) => {
   res.send("<h1>hello world</h1>");
