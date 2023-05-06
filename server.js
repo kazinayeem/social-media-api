@@ -2,7 +2,6 @@ const express = require("express");
 const db = require("./config/db");
 const router = require("./routes/profileRoutes");
 const logger = require("morgan");
-const deletealluser = require("./test/delete");
 const app = express();
 app.use(logger("dev"));
 app.use(express.json());
