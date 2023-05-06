@@ -7,7 +7,10 @@ const dbs = "mongodb+srv://kazinayeem55085:8hxvuD4JpsadO87w@cluster0.06x25aj.mon
 const pass = "8hxvuD4JpsadO87w"
 const db = async () => {
   try {
-    await mongoose.connect(dbs);
+    await mongoose.connect(dbs,{
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
     console.log("database connect");
   } catch (error) {
     console.log(error);
